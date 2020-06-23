@@ -9,6 +9,14 @@ div {
     color: wheat;
 }
 
+.selectedPage {
+  font-weight: bolder;
+}
+
+ span {
+  cursor: pointer;
+}
+
 
 .btn_add {
     position: relative;
