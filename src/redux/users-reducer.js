@@ -14,7 +14,7 @@ let initialState =  {
     // {id: 5, photoUrl:' https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSzHVX6G9-sQp5HtqHTkD1gLUvzPRMR0APMhXDs_6tFt7f2BGqd&usqp=CAU', followed: false, fullName: 'Valera', status: 'Hi!', location: {country: 'Ukraine', city: 'Kryvyi Rih' } },
     ],
     pageSize: 5,
-    totalUsersCount: 0,
+    totalUsersCount: 1,
     currentPage: 1
 };
 
