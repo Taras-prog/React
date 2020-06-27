@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 import s from './Users.module.css'
 import  userPhoto from '../../assets/images/pngtree-vector-block-user-icon-png-image_780605.jpg'
@@ -13,14 +14,12 @@ function Users (props) {
 
       return (
         <div>
-         <div>
-            {pages.map( p => {
+               {pages.map( p => {
                
                return <span className={ props.currentPage === p && s.selectedPage} 
                onClick={(e) => { props.onPageChanged(p);}}> {p} </span>
             })}
-
-        </div>
+        
         {props.users.map((u) => <div key={u.id }>
             <span>
                 <div>
