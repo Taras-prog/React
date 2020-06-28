@@ -1,7 +1,7 @@
-/* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 import s from './Users.module.css'
 import  userPhoto from '../../assets/images/pngtree-vector-block-user-icon-png-image_780605.jpg'
+import { NavLink } from 'react-router-dom';
 
 function Users (props) {
 
@@ -13,18 +13,18 @@ function Users (props) {
     }
 
       return (
-        <div>
-               {pages.map( p => {
-               
+        <div>  {pages.map( p => {
                return <span className={ props.currentPage === p && s.selectedPage} 
                onClick={(e) => { props.onPageChanged(p);}}> {p} </span>
-            })}
-        
+                     })}
         {props.users.map((u) => <div key={u.id }>
             <span>
                 <div>
-                <img src={u.photos.small != null ?u.photos.small : userPhoto } className={s.userPhoto} />
-                </div>
+            <NavLink to={'/profile/'+ u.id}>
+                <img src={u.photos.small != null ?u.photos.small : userPhoto} 
+                className={s.userPhoto} alt="User ava"/>
+            </NavLink>
+             </div>
                 <div>
                     { u.followed
                     ? <button onClick={ () => {props.unfollow(u.id)} }>Unfollow</button> 
