@@ -18,7 +18,9 @@ function ProfileInfo(props) {
 
       <div className={s.ava_block}> 
       <img src={props.profile.photos.small} alt="User photos"/> 
-                ava + description
+      <p>{props.profile.aboutMe}</p>
+      <p>{props.profile.contacts.twitter}</p>
+      <hr/>
       </div>
     </div>
    
